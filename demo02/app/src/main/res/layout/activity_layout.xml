@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".menu.layout.LayoutActivity">
+
+    <Button
+        android:id="@+id/linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout 线性布局" />
+
+    <Button
+        android:id="@+id/relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RelativeLayout 相对布局" />
+
+    <Button
+        android:id="@+id/table_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TableLayout 表格布局" />
+
+    <Button
+        android:id="@+id/frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FrameLayout 帧布局" />
+
+    <Button
+        android:id="@+id/absolute_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AbsoluteLayout 绝对布局" />
+
+    <Button
+        android:id="@+id/grid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GridLayout 网格布局" />
+
+    <Button
+        android:id="@+id/constraint_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ConstraintLayout 约束布局" />
+
+</LinearLayout>

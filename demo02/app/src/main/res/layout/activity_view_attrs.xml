@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".menu.view.ViewAttrsActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha属性，定义透明度，取值范围0~1，0代表完全透明，1代表完全不透明，本控件演示的透明度是0.4"
+        android:alpha="0.4"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clickable属性，是否可点击，本次演示可点击，并通过onClick属性关联了点击事件"
+        android:onClick="clickMe"
+        android:clickable="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="background属性，设置本控件的背景"
+        android:background="#00ffff"
+        />
+    <TextView
+        android:id="@+id/id_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="id属性，格式为  @+id/id_test"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="padding属性，设置内边距，本控件演示16dp内边距"
+        android:padding="16dp"
+        />
+
+</LinearLayout>
