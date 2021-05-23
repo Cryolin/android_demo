@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".menu.textview.TextViewActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/yellow"
+        android:shadowRadius="10"
+        android:shadowDx="16"
+        android:shadowDy="16"
+        android:drawableTop="@drawable/ic_pig"
+        android:drawablePadding="2dp"
+        android:text="TextView"
+        android:textSize="48sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/purple_700"
+        android:shadowRadius="10"
+        android:shadowDx="16"
+        android:shadowDy="16"
+        android:text="www.baidu.com"
+        android:textSize="24sp"
+        android:autoLink="web"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/marquee"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="床前明月光，疑是地上霜。举头望明月，低头思故乡。低头思故乡"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
+
+</LinearLayout>

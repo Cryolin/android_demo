@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.colin.demo02.menu.layout.LayoutActivity;
+import com.colin.demo02.menu.textview.TextViewActivity;
 import com.colin.demo02.menu.view.ViewActivity;
 import com.colin.demo02.util.JumpActivityUtil;
 
 public class MainActivity extends AppCompatActivity {
     private Button mViewBtn;
     private Button mLayoutBtn;
+    private Button mTextViewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +28,7 @@ public class MainActivity extends AppCompatActivity {
         mViewBtn.setOnClickListener((v) -> JumpActivityUtil.jumpActivity(MainActivity.this, ViewActivity.class));
         mLayoutBtn = findViewById(R.id.layout_activity);
         mLayoutBtn.setOnClickListener((v) -> JumpActivityUtil.jumpActivity(MainActivity.this, LayoutActivity.class));
+        mTextViewBtn = findViewById(R.id.textView_activity);
+        mTextViewBtn.setOnClickListener((v)-> JumpActivityUtil.jumpActivity(MainActivity.this, TextViewActivity.class));
     }
 }
