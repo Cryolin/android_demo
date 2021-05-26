@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.textview.EditTextActivity">
+
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="获取焦点后选中"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/yellow"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="phone"
+        android:hint="phone"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="date"
+        android:hint="date"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="time"
+        android:hint="time"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:hint="textPassword"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
+</LinearLayout>

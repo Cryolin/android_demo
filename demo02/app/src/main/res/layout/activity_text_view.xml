@@ -50,5 +50,27 @@
         android:textStyle="italic"
         android:singleLine="true" />
 
+    <TextView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="这是默认提示语"
+        android:textColorHint="@color/gray"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textScaleX="2.2"
+        android:hint="调整字宽度"
+        android:textColorHint="@color/gray"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
 
 </LinearLayout>
