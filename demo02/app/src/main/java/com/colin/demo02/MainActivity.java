@@ -31,6 +31,6 @@ public class MainActivity extends AppCompatActivity {
         mLayoutBtn = findViewById(R.id.layout_activity);
         mLayoutBtn.setOnClickListener((v) -> JumpActivityUtil.jumpActivity(MainActivity.this, LayoutActivity.class));
         mTextViewBtn = findViewById(R.id.textView_activity);
-        mTextViewBtn.setOnClickListener((v)-> JumpActivityUtil.jumpActivity(MainActivity.this, EditTextActivity.class));
+        mTextViewBtn.setOnClickListener((v)-> JumpActivityUtil.jumpActivity(MainActivity.this, TextViewActivity.class));
     }
 }

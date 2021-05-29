@@ -70,4 +70,16 @@
         android:textStyle="italic"
         android:singleLine="true" />
 
+    <com.colin.demo02.menu.textview.EditTextWithDel
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:hint="带删除按钮的EditText"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        android:singleLine="true" />
+
 </LinearLayout>
