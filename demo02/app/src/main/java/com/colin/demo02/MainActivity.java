@@ -2,13 +2,10 @@ package com.colin.demo02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.colin.demo02.menu.layout.LayoutActivity;
-import com.colin.demo02.menu.textview.EditTextActivity;
 import com.colin.demo02.menu.textview.TextViewActivity;
 import com.colin.demo02.menu.view.ViewActivity;
 import com.colin.demo02.util.JumpActivityUtil;

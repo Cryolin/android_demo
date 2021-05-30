@@ -11,6 +11,7 @@
         android:layout_weight="1" />
 
     <RadioGroup
+        android:id="@+id/text_view_radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#22000000"
@@ -20,21 +21,25 @@
 
         <RadioButton
             style="@style/bottom_tab_style"
+            android:id="@+id/text_view"
             android:drawableTop="@drawable/drawable_selector_01"
             android:text="TextView" />
 
         <RadioButton
             style="@style/bottom_tab_style"
+            android:id="@+id/edit_text"
             android:drawableTop="@drawable/drawable_selector_02"
             android:text="EditText" />
 
         <RadioButton
             style="@style/bottom_tab_style"
+            android:id="@+id/button"
             android:drawableTop="@drawable/drawable_selector_01"
             android:text="Button" />
 
         <RadioButton
             style="@style/bottom_tab_style"
+            android:id="@+id/image_button"
             android:drawableTop="@drawable/drawable_selector_02"
             android:text="ImageButton" />
 
