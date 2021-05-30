@@ -1,4 +1,4 @@
-package com.colin.demo02.menu.textview;
+package com.colin.demo02.menu.textview.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radio_group_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/men"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/eat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="吃饭" />
+
+    <CheckBox
+        android:id="@+id/sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="睡觉" />
+
+    <ToggleButton
+        android:layout_margin="16dp"
+        android:id="@+id/toggle_button"
+        android:textOn="ToggleButton开启"
+        android:textOff="ToggleButton关闭"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:layout_margin="16dp"
+        android:textOn="Switch开启"
+        android:textOff="Switch关闭"
+        android:showText="true"
+        android:thumb="@drawable/ic_pig"
+        android:track="@drawable/track_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

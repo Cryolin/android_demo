@@ -8,7 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F9F900</color>
+    <color name="red">#FF0000</color>
     <color name="gray">#95A1AA</color>
-    <color name="unchecked">#363636</color>
+    <color name="unchecked">#BAB2B2</color>
     <color name="checked">#3900FD</color>
+    <color name="reveal_color">#FFFFFF</color>
+    <color name="bottom_color">#3086E4</color>
+    <color name="bottom_bg">#40BAF8</color>
+    <color name="green">#00FF00</color>
 </resources>

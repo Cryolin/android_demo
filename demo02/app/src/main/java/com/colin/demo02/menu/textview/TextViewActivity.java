@@ -1,22 +1,17 @@
 package com.colin.demo02.menu.textview;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.colin.demo02.R;
 import com.colin.demo02.menu.base.BaseFragment;
 import com.colin.demo02.menu.base.BasePager;
+import com.colin.demo02.menu.textview.pager.ButtonPager;
+import com.colin.demo02.menu.textview.pager.CompoundButtonPager;
 import com.colin.demo02.menu.textview.pager.EditTextPager;
 import com.colin.demo02.menu.textview.pager.TextViewPager;
 
@@ -24,8 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextViewActivity extends AppCompatActivity {
-
-
     private List<BasePager> mPagers = new ArrayList<>();
 
     private RadioGroup mRadioGroup;
@@ -35,7 +28,6 @@ public class TextViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_text_view);
         setContentView(R.layout.text_view_guide);
         initView();
     }
@@ -50,6 +42,8 @@ public class TextViewActivity extends AppCompatActivity {
     private void initView() {
         mPagers.add(new TextViewPager(this));
         mPagers.add(new EditTextPager(this));
+        mPagers.add(new ButtonPager(this));
+        mPagers.add(new CompoundButtonPager(this));
         mRadioGroup = findViewById(R.id.text_view_radio_group);
         mRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
@@ -71,7 +65,8 @@ public class TextViewActivity extends AppCompatActivity {
             setFragment();
         });
         mRadioGroup.check(R.id.text_view);
-//        mMarquee = findViewById(R.id.marquee);
-//        mMarquee.setSelected(true);
+
     }
+
+
 }

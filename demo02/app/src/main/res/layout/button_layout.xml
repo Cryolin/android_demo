@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.widget.Button
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="有按下效果的button"
+        android:background="@drawable/button_selector"/>
+
+    <com.colin.demo02.menu.textview.view.MyButton
+        android:layout_margin="8dp"
+        android:id="@+id/myBtn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@mipmap/ic_tur_icon"
+        android:background="@color/bottom_bg"
+        android:scaleType="center"/>
+
 
 </LinearLayout>

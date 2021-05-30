@@ -69,7 +69,7 @@
         android:textStyle="italic"
         android:singleLine="true" />
 
-    <com.colin.demo02.menu.textview.EditTextWithDel
+    <com.colin.demo02.menu.textview.view.EditTextWithDel
         android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
