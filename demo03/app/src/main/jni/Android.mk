@@ -5,7 +5,7 @@ LOCAL_PATH := ${call my-dir}
 include ${CLEAR_VARS}
 
 # 当前模块名
-LOCAL_MODULE := NDK-TEST
+LOCAL_MODULE := ndk-test
 
 # 当前模块包含的源代码文件
 LOCAL_SRC_FILES := ndk_test.c

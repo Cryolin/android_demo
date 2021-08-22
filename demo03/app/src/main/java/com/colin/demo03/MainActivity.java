@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextView;
 
     static {
-        System.loadLibrary("NDK-TEST");
+        System.loadLibrary("ndk-test");
     }
 
     @Override
