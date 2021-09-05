@@ -1,0 +1,5 @@
+include ':client2'
+include ':mylibrary'
+include ':server'
+include ':client'
+rootProject.name = "client"
