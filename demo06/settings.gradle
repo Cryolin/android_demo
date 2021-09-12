@@ -1,0 +1,4 @@
+include ':aidllib'
+include ':server'
+include ':client'
+rootProject.name = "client"
