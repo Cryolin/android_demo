@@ -12,21 +12,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.colin.aidllib.IRemoteInterface;
+import com.colin.aidllib.IMediaPlayer;
+import com.colin.aidllib.IMediaPlayerClient;
+import com.colin.aidllib.IMediaPlayerService;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mBind;
 
-    private Button mGetName;
+    private Button mCreateMediaPlayer;
+
+    private Button mPlay;
+
+    private Button mPause;
+
+    private IMediaPlayer mMediaPlayer;
 
     private boolean mIsBound;
 
-    private IRemoteInterface mService;
+    private IMediaPlayerService mService;
 
     private ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            mService = IRemoteInterface.Stub.asInterface(iBinder);
+            mService = IMediaPlayerService.Stub.asInterface(iBinder);
             mIsBound = true;
         }
 
@@ -53,8 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         mBind = findViewById(R.id.bind);
         mBind.setOnClickListener(this);
-        mGetName = findViewById(R.id.getName);
-        mGetName.setOnClickListener(this);
+        mCreateMediaPlayer = findViewById(R.id.crate_media_player);
+        mCreateMediaPlayer.setOnClickListener(this);
+        mPlay = findViewById(R.id.play);
+        mPlay.setOnClickListener(this);
+        mPause = findViewById(R.id.pause);
+        mPause.setOnClickListener(this);
     }
 
 
@@ -66,14 +78,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setClassName("com.colin.server", "com.colin.server.MyService");
                 bindService(intent, mServiceConnection, BIND_AUTO_CREATE);
                 break;
-            case R.id.getName:
+            case R.id.crate_media_player:
                 if (!mIsBound || mService == null) {
                     Toast.makeText(getApplicationContext(), "请先bindService", Toast.LENGTH_LONG).show();
                     break;
                 }
                 try {
-                    String name = mService.getName();
-                    Toast.makeText(getApplicationContext(), name, Toast.LENGTH_LONG).show();
+                    mMediaPlayer = mService.createMediaPlayer(new IMediaPlayerClient.Stub() {
+                        @Override
+                        public void onNotify(String notifyData) throws RemoteException {
+                            Toast.makeText(getApplicationContext(), notifyData, Toast.LENGTH_LONG).show();
+                        }
+                    });
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.play:
+                if (!mIsBound || mService == null) {
+                    Toast.makeText(getApplicationContext(), "请先bindService", Toast.LENGTH_LONG).show();
+                    break;
+                }
+                if (mMediaPlayer == null) {
+                    Toast.makeText(getApplicationContext(), "请先创建MediaPlayer", Toast.LENGTH_LONG).show();
+                    break;
+                }
+                try {
+                    mMediaPlayer.play();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.pause:
+                if (!mIsBound || mService == null) {
+                    Toast.makeText(getApplicationContext(), "请先bindService", Toast.LENGTH_LONG).show();
+                    break;
+                }
+                if (mMediaPlayer == null) {
+                    Toast.makeText(getApplicationContext(), "请先创建MediaPlayer", Toast.LENGTH_LONG).show();
+                    break;
+                }
+                try {
+                    mMediaPlayer.pause();
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }

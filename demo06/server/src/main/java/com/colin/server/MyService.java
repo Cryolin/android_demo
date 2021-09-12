@@ -5,19 +5,41 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import com.colin.aidllib.IRemoteInterface;
+import com.colin.aidllib.IMediaPlayerClient;
+import com.colin.aidllib.IMediaPlayer;
+import com.colin.aidllib.IMediaPlayerService;
 
 public class MyService extends Service {
+    private IMediaPlayerClient mClient;
+
     public MyService() {
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        return new IRemoteInterface.Stub() {
+        return new IMediaPlayerService.Stub() {
+
             @Override
-            public String getName() throws RemoteException {
-                return "Hello, I'm Server!";
+            public IMediaPlayer createMediaPlayer(IMediaPlayerClient client) throws RemoteException {
+                mClient = client;
+                return new Client();
             }
         };
+    }
+
+    class Client extends IMediaPlayer.Stub {
+        @Override
+        public void play() throws RemoteException {
+            if (mClient != null) {
+                mClient.onNotify("start play!!!");
+            }
+        }
+
+        @Override
+        public void pause() throws RemoteException {
+            if (mClient != null) {
+                mClient.onNotify("pause!!!");
+            }
+        }
     }
 }

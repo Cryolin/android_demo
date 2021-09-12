@@ -15,9 +15,21 @@
         android:text="bind" />
 
     <Button
-        android:id="@+id/getName"
+        android:id="@+id/crate_media_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="getName" />
+        android:text="crate_media_player" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pause" />
 
 </LinearLayout>
