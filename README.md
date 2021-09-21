@@ -8,4 +8,5 @@
 | demo06 | aidl：aidl回调，aidl对象作为方法传参或返回值 |
 | demo07 | aidl：Binder.clearCallingIdentity            |
 | demo08 | aidl：动手写aidl生成的java文件，取代aidl     |
+| demo09 | MediaPlayer基本用法                          |
 
