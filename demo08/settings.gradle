@@ -1,4 +1,3 @@
 include ':server'
-include ':aidllib'
 include ':client'
 rootProject.name = "client"
