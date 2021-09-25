@@ -9,4 +9,5 @@
 | demo07 | aidl：Binder.clearCallingIdentity            |
 | demo08 | aidl：动手写aidl生成的java文件，取代aidl     |
 | demo09 | MediaPlayer基本用法                          |
+| demo10 | AudioTrack基本用法                           |
 
