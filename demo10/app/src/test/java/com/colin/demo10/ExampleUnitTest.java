@@ -1,4 +1,4 @@
-package colin.com.audiotrackdemo;
+package com.colin.demo10;
 
 import org.junit.Test;
 
